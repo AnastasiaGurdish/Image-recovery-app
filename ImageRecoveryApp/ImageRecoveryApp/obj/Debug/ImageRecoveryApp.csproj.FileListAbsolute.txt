@@ -1,0 +1,10 @@
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\bin\Debug\ImageRecoveryApp.exe.config
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\bin\Debug\ImageRecoveryApp.exe
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\bin\Debug\ImageRecoveryApp.pdb
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.csprojAssemblyReference.cache
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.Properties.Resources.resources
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.csproj.GenerateResource.cache
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.csproj.CoreCompileInputs.cache
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.exe
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.pdb
+D:\GITHUB\Image-recovery-app\ImageRecoveryApp\ImageRecoveryApp\obj\Debug\ImageRecoveryApp.ImageRecoveryImage.resources
