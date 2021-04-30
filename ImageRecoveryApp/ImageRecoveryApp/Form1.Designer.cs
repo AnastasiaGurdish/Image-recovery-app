@@ -29,147 +29,116 @@ namespace ImageRecoveryApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.UploadPhotoButton = new System.Windows.Forms.Button();
             this.UploadedImage = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.SpoilImage = new System.Windows.Forms.Button();
+            this.RecoverImage = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.UploadedImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // UploadPhotoButton
             // 
-            this.UploadPhotoButton.BackColor = System.Drawing.Color.Tomato;
+            this.UploadPhotoButton.BackColor = System.Drawing.Color.RosyBrown;
             this.UploadPhotoButton.FlatAppearance.BorderSize = 0;
             this.UploadPhotoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.UploadPhotoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.UploadPhotoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadPhotoButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UploadPhotoButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.UploadPhotoButton.Location = new System.Drawing.Point(45, 62);
+            this.UploadPhotoButton.Location = new System.Drawing.Point(50, 30);
             this.UploadPhotoButton.Name = "UploadPhotoButton";
             this.UploadPhotoButton.Size = new System.Drawing.Size(342, 48);
             this.UploadPhotoButton.TabIndex = 0;
             this.UploadPhotoButton.Text = "Загрузить фото";
             this.UploadPhotoButton.UseVisualStyleBackColor = false;
+            this.UploadPhotoButton.Click += new System.EventHandler(this.UploadPhotoButton_Click);
             // 
             // UploadedImage
             // 
-            this.UploadedImage.BackColor = System.Drawing.Color.MistyRose;
-            this.UploadedImage.Location = new System.Drawing.Point(586, 27);
+            this.UploadedImage.BackColor = System.Drawing.Color.Snow;
+            this.UploadedImage.Location = new System.Drawing.Point(441, 25);
             this.UploadedImage.Name = "UploadedImage";
-            this.UploadedImage.Size = new System.Drawing.Size(469, 602);
+            this.UploadedImage.Size = new System.Drawing.Size(610, 600);
             this.UploadedImage.TabIndex = 1;
             this.UploadedImage.TabStop = false;
             // 
-            // checkBox1
+            // SpoilImage
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(45, 397);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(367, 27);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Первый способ восстановления";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.SpoilImage.BackColor = System.Drawing.Color.RosyBrown;
+            this.SpoilImage.FlatAppearance.BorderSize = 0;
+            this.SpoilImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.SpoilImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.SpoilImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SpoilImage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpoilImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SpoilImage.Location = new System.Drawing.Point(50, 105);
+            this.SpoilImage.Name = "SpoilImage";
+            this.SpoilImage.Size = new System.Drawing.Size(342, 48);
+            this.SpoilImage.TabIndex = 5;
+            this.SpoilImage.Text = "Наложить искажение";
+            this.SpoilImage.UseVisualStyleBackColor = false;
+            this.SpoilImage.Click += new System.EventHandler(this.SpoilImage_Click);
             // 
-            // checkBox2
+            // RecoverImage
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.Location = new System.Drawing.Point(45, 451);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(363, 27);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Второй способ восстановления";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.RecoverImage.BackColor = System.Drawing.Color.RosyBrown;
+            this.RecoverImage.FlatAppearance.BorderSize = 0;
+            this.RecoverImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.RecoverImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.RecoverImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RecoverImage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RecoverImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RecoverImage.Location = new System.Drawing.Point(50, 183);
+            this.RecoverImage.Name = "RecoverImage";
+            this.RecoverImage.Size = new System.Drawing.Size(342, 48);
+            this.RecoverImage.TabIndex = 6;
+            this.RecoverImage.Text = "Восстановить изображение";
+            this.RecoverImage.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // SaveButton
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox3.Location = new System.Drawing.Point(45, 507);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(358, 27);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Третий способ восстановления";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.SaveButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.SaveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaveButton.Location = new System.Drawing.Point(50, 259);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(342, 48);
+            this.SaveButton.TabIndex = 7;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // button1
+            // openFileDialog
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(45, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(342, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Наложить искажение";
-            this.button1.UseVisualStyleBackColor = false;
+            this.openFileDialog.FileName = "openFileDialog";
             // 
-            // button2
+            // chart1
             // 
-            this.button2.BackColor = System.Drawing.Color.Tomato;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(45, 571);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(342, 48);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Восстановить изображение";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox4.Location = new System.Drawing.Point(45, 252);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(285, 27);
-            this.checkBox4.TabIndex = 9;
-            this.checkBox4.Text = "Искажаюющая функция";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox5.Location = new System.Drawing.Point(45, 196);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(189, 27);
-            this.checkBox5.TabIndex = 8;
-            this.checkBox5.Text = "Наложить смаз";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox6.Location = new System.Drawing.Point(45, 142);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(184, 27);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "Наложить шум";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(50, 341);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Bytes";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(341, 309);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
+            this.chart1.Visible = false;
             // 
             // ImageRecoveryImage
             // 
@@ -177,22 +146,18 @@ namespace ImageRecoveryApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1082, 653);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.RecoverImage);
+            this.Controls.Add(this.SpoilImage);
             this.Controls.Add(this.UploadedImage);
             this.Controls.Add(this.UploadPhotoButton);
             this.Name = "ImageRecoveryImage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Реставратор фото";
             ((System.ComponentModel.ISupportInitialize)(this.UploadedImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -200,14 +165,11 @@ namespace ImageRecoveryApp
 
         private System.Windows.Forms.Button UploadPhotoButton;
         private System.Windows.Forms.PictureBox UploadedImage;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Button SpoilImage;
+        private System.Windows.Forms.Button RecoverImage;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
