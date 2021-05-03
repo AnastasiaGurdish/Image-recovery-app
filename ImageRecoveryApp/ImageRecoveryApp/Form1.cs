@@ -8,7 +8,7 @@ namespace ImageRecoveryApp
 {
     public partial class ImageRecoveryImage : Form
     {
-        Bitmap image, destroyed_image, processed, display;
+        Bitmap image, destroyed_image;
         string image_path;
         string filter = "Image | *.png; *.jpg; *.gif";
         public static int Size;
@@ -34,19 +34,16 @@ namespace ImageRecoveryApp
                 image_path = ofd.FileName;
                 image = (Bitmap)Bitmap.FromFile(image_path);
                 Size = image.Width;
-                image = image.Padding();
-                display = image.ScaleImage(UploadedImage.Width, UploadedImage.Height);
-                UploadedImage.Image = display;
-                // processed = image.Grayscale();
-                foreach (var series in chart1.Series)
-                {
-                    series.Points.Clear();
-                }
-                int[] vals = ReadPixels(image);
-                for (int i = 0; i < vals.Length; i++)
-                {
-                    chart1.Series["Bytes"].Points.AddXY(i, vals[i]);
-                }
+                UploadedImage.Image = image;
+                //foreach (var series in chart1.Series)
+                //{
+                //    series.Points.Clear();
+                //}
+                //int[] vals = ReadPixels(image);
+                //for (int i = 0; i < vals.Length; i++)
+                //{
+                //    chart1.Series["Bytes"].Points.AddXY(i, vals[i]);
+                //}
             }
             else
             {
@@ -56,9 +53,10 @@ namespace ImageRecoveryApp
 
         private void SpoilImage_Click(object sender, EventArgs e)
         {
-            // processed = image.CutPartOfImage();
-            // display = processed.ScaleImage(UploadedImage.Width, UploadedImage.Height);
-            // UploadedImage.Image = display;
+
+
+            destroyed_image = image.CutPartOfImage();
+            UploadedImage.Image = destroyed_image;
             // Вырезаем выбранный кусок картинки
 
             //  Rectangle rec = new Rectangle(50, 50, UploadedImage.Width - 50, UploadedImage.Height - 50);
@@ -70,22 +68,6 @@ namespace ImageRecoveryApp
             //    g.Clear(Color.Transparent);
             //}
             // UploadedImage.Image = bmp;
-
-            using (Bitmap bmp = new Bitmap(100, 100, PixelFormat.Format32bppArgb))
-            {
-                using (Graphics g = Graphics.FromImage(bmp))
-                using (Brush opaqueRedBrush = new SolidBrush(Color.FromArgb(255, 255, 0, 0)))
-                using (Brush semiRedBrush = new SolidBrush(Color.FromArgb(128, 255, 0, 0)))
-                {
-                    g.Clear(Color.Transparent);
-                    Rectangle bigRect = new Rectangle(0, 0, 100, 100);
-                    Rectangle smallRect = new Rectangle(25, 25, 50, 50);
-                    g.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceCopy;
-                    g.FillRectangle(opaqueRedBrush, bigRect);
-                    g.FillRectangle(semiRedBrush, smallRect);
-                }
-                bmp.Save(@"C:\FilePath\TestDrawTransparent.png", ImageFormat.Png); //Рабочий стол
-            }
         }
 
 
