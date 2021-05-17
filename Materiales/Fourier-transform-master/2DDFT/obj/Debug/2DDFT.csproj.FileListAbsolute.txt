@@ -1,0 +1,26 @@
+C:\Users\frekri\Documents\Visual Studio 2015\Projects\2DDFT\2DDFT\bin\Debug\2DDFT.exe.config
+C:\Users\frekri\Documents\Visual Studio 2015\Projects\2DDFT\2DDFT\bin\Debug\2DDFT.exe
+C:\Users\frekri\Documents\Visual Studio 2015\Projects\2DDFT\2DDFT\bin\Debug\2DDFT.pdb
+C:\Users\frekri\Documents\Visual Studio 2015\Projects\2DDFT\2DDFT\obj\Debug\2DDFT.exe
+C:\Users\frekri\Documents\Visual Studio 2015\Projects\2DDFT\2DDFT\obj\Debug\2DDFT.pdb
+C:\Users\frekri\Documents\Visual Studio 2015\Projects\2DDFT\2DDFT\obj\Debug\2DDFT.csprojResolveAssemblyReference.cache
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\bin\Debug\2DDFT.exe.config
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\obj\Debug\2DDFT.exe
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\obj\Debug\2DDFT.pdb
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\bin\Debug\2DDFT.exe
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\bin\Debug\2DDFT.pdb
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\obj\Debug\2DDFT.csprojResolveAssemblyReference.cache
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\bin\Debug\Pictures\lena.gif
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\bin\Debug\Fourier.dll
+C:\Users\frekri\Desktop\Fourier-transform\2DDFT\bin\Debug\Fourier.pdb
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\bin\Debug\Pictures\lena.gif
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\bin\Debug\2DDFT.exe.config
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\bin\Debug\2DDFT.exe
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\bin\Debug\2DDFT.pdb
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\bin\Debug\Fourier.dll
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\bin\Debug\Fourier.pdb
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\obj\Debug\2DDFT.csprojAssemblyReference.cache
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\obj\Debug\2DDFT.csproj.CoreCompileInputs.cache
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\obj\Debug\2DDFT.csproj.CopyComplete
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\obj\Debug\2DDFT.exe
+C:\Users\Nana\Downloads\Fourier-transform-master\2DDFT\obj\Debug\2DDFT.pdb

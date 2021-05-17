@@ -1,0 +1,20 @@
+C:\Users\Asus\source\repos\Noise Template\Noise Template\bin\Debug\Noise Template.exe.config
+C:\Users\Asus\source\repos\Noise Template\Noise Template\bin\Debug\Noise Template.exe
+C:\Users\Asus\source\repos\Noise Template\Noise Template\bin\Debug\Noise Template.pdb
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise Template.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise_Template.NoiseDemo.resources
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise_Template.Properties.Resources.resources
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise Template.csproj.GenerateResource.cache
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise Template.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise Template.exe
+C:\Users\Asus\source\repos\Noise Template\Noise Template\obj\Debug\Noise Template.pdb
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\bin\Debug\Noise Template.exe.config
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\bin\Debug\Noise Template.exe
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\bin\Debug\Noise Template.pdb
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise Template.csprojAssemblyReference.cache
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise_Template.NoiseDemo.resources
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise_Template.Properties.Resources.resources
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise Template.csproj.GenerateResource.cache
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise Template.csproj.CoreCompileInputs.cache
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise Template.exe
+C:\Users\Nana\Downloads\Salt-and-pepper\Salt and pepper\Noise Template\obj\Debug\Noise Template.pdb

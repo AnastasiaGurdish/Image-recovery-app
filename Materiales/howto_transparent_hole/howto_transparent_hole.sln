@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "howto_transparent_hole", "howto_transparent_hole.csproj", "{1E719988-F68D-4980-B111-9901EC29BD16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E719988-F68D-4980-B111-9901EC29BD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E719988-F68D-4980-B111-9901EC29BD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E719988-F68D-4980-B111-9901EC29BD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E719988-F68D-4980-B111-9901EC29BD16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E922095B-698B-4CE0-A36F-8BE0BAECD7CB}
+	EndGlobalSection
+EndGlobal

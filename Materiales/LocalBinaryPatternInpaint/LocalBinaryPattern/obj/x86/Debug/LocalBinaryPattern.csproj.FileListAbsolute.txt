@@ -1,0 +1,9 @@
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\bin\Debug\LocalBinaryPattern.exe
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\bin\Debug\LocalBinaryPattern.pdb
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.csprojAssemblyReference.cache
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.Form1.resources
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.Properties.Resources.resources
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.csproj.GenerateResource.cache
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.csproj.CoreCompileInputs.cache
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.exe
+C:\Users\Nana\Downloads\LocalBinaryPatternInpaint\LocalBinaryPattern\obj\x86\Debug\LocalBinaryPattern.pdb
