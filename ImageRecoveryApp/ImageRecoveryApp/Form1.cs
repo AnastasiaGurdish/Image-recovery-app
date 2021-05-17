@@ -8,7 +8,7 @@ namespace ImageRecoveryApp
 {
     public partial class ImageRecoveryImage : Form
     {
-        Bitmap image, destroyed_image;
+        Bitmap image, processed, processedDest, imagePadding, destroyed_image;
         string image_path;
         string filter = "Image | *.png; *.jpg; *.gif";
         public static int Size;
@@ -19,8 +19,6 @@ namespace ImageRecoveryApp
         public ImageRecoveryImage()
         {
             InitializeComponent();
-            chart1.ChartAreas[0].AxisX.Maximum = 280; //Задаешь максимальные значения координат
-            chart1.ChartAreas[0].AxisY.Maximum = 6000;
             ofd = new OpenFileDialog();
             sfd = new SaveFileDialog();
             ofd.Filter = filter;
@@ -35,77 +33,45 @@ namespace ImageRecoveryApp
                 image = (Bitmap)Bitmap.FromFile(image_path);
                 Size = image.Width;
                 UploadedImage.Image = image;
-                //foreach (var series in chart1.Series)
-                //{
-                //    series.Points.Clear();
-                //}
-                //int[] vals = ReadPixels(image);
-                //for (int i = 0; i < vals.Length; i++)
-                //{
-                //    chart1.Series["Bytes"].Points.AddXY(i, vals[i]);
-                //}
             }
             else
             {
                 MessageBox.Show("Невозможно открыть изображение!");
             }
+            imagePadding = image.Padding();
+            processed = imagePadding.Grayscale();
+            converted = FFTMethods.Forward(processed);
+            processed = converted.VisualizeFourier();
+            pictureBox1.Image = processed;
         }
 
         private void SpoilImage_Click(object sender, EventArgs e)
         {
+            if (UploadedImage.Image != null)
+            {
+                destroyed_image = image.CutPartOfImage();
+                Size = destroyed_image.Width;
+                UploadedImage.Image = destroyed_image;
+            }
+            else
+            {
+                MessageBox.Show("Загрузите сперва изображение!");
+            }
+            imagePadding = destroyed_image.Padding();
+            processedDest = imagePadding.Grayscale();
+            converted = FFTMethods.Forward(processedDest);
+            processedDest = converted.VisualizeFourier();
+            pictureBox2.Image = processedDest;
 
-
-            destroyed_image = image.CutPartOfImage();
-            UploadedImage.Image = destroyed_image;
-            // Вырезаем выбранный кусок картинки
-
-            //  Rectangle rec = new Rectangle(50, 50, UploadedImage.Width - 50, UploadedImage.Height - 50);
-            //Bitmap bmp = new Bitmap(image.Width,image.Height);
-            //using (Graphics g = Graphics.FromImage(bmp))
-            //{
-            //    Rectangle crop = new Rectangle(222, 222, 55, 55);
-            //    g.SetClip(crop);
-            //    g.Clear(Color.Transparent);
-            //}
-            // UploadedImage.Image = bmp;
         }
-
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private int[] ReadPixels(Bitmap img)
-        {
-            int w = img.Width;
-            int h = img.Height;
-
-            BitmapData sd = img.LockBits(new Rectangle(0, 0, w, h),
-                ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-            int bytes = sd.Stride * sd.Height;
-            byte[] buffer = new byte[bytes];
-            Marshal.Copy(sd.Scan0, buffer, 0, bytes);
-            img.UnlockBits(sd);
-            int[] p = new int[256];
-            for (int i = 0; i < bytes; i += 4)
+            sfd.FileName = image_path;
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                p[buffer[i]]++;
+                UploadedImage.Image.Save(sfd.FileName);
             }
-            return p;
-        }
-
-        public static double Factorial(int number)
-        {
-            double result = 1;
-            int n = number;
-            while (n != 1)
-            {
-                result *= n;
-                n -= 1;
-            }
-
-            return result;
         }
 
     }

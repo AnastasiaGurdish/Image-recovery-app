@@ -4,9 +4,6 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
 
-using System.Drawing.Drawing2D;
-
-
 namespace ImageRecoveryApp
 {
     static class DestroyImage
@@ -16,99 +13,79 @@ namespace ImageRecoveryApp
             int w = image.Width;
             int h = image.Height;
 
-            BitmapData image_data = image.LockBits(new Rectangle(0, 0, w, h), ImageLockMode.ReadOnly, PixelFormat.Format24bppRgb);
-            int bytes = image_data.Stride * image_data.Height;
+            BitmapData input_data = image.LockBits(new Rectangle(0, 0, w, h), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+
+            int bytes = input_data.Stride * input_data.Height;
+
             byte[] buffer = new byte[bytes];
             byte[] result = new byte[bytes];
 
-            Marshal.Copy(image_data.Scan0, buffer, 0, bytes);
-            image.UnlockBits(image_data);
+            Marshal.Copy(input_data.Scan0, buffer, 0, bytes);
+            image.UnlockBits(input_data);
 
+            int pixel_position = 0;
             Random rndX = new Random();
             Random rndY = new Random();
-            Point StartPoint, EndPoint;
+            int x1 = 0;
+            int x2 = 0;
 
-            if (w < h)
+            int y1 = 0;
+            int y2 = 0;
+
+            if (h > w)
             {
-                StartPoint = new Point(rndX.Next(0, h), rndY.Next(0, h));
-                EndPoint = new Point(rndX.Next(0, h), rndY.Next(0, h));
+                x1 = rndX.Next(0, w);
+                x2 = rndX.Next(x1, w);
+
+                y1 = rndY.Next(0, h);
+                y2 = rndY.Next(y1, h);
             }
             else
             {
-                StartPoint = new Point(rndX.Next(0, w), rndY.Next(0, w));
-                EndPoint = new Point(rndX.Next(0, w), rndY.Next(0, w));
+                x1 = rndX.Next(0, h);
+                x2 = rndX.Next(x1, h);
+
+                y1 = rndY.Next(0, w);
+                y2 = rndY.Next(y1, w);
             }
 
-            Rectangle full_rectangle = new Rectangle(0, 0, w, h);
-            Region region = new Region(full_rectangle);
-
-            Rectangle ellipse_rect = SelectedRect(StartPoint, EndPoint);
-            GraphicsPath path = new GraphicsPath();
-            path.AddRectangle(ellipse_rect);
-            // path.AddEllipse(ellipse_rect);
-            region.Exclude(path);
-
-            Bitmap bm = new Bitmap(w, h);
-            using (Graphics gr = Graphics.FromImage(bm))
+            for (int y = 0; y < h; y++)
             {
-                gr.Clear(Color.Transparent);
-                gr.SetClip(region, CombineMode.Replace);
-                gr.SmoothingMode = SmoothingMode.AntiAlias;
-                using (TextureBrush brush = new TextureBrush(image, full_rectangle))
+                for (int x = 0; x < w; x++)
                 {
-                    gr.FillRectangle(brush, full_rectangle);
+                    if (x == x1 && y == y1)
+                    {
+                        for (int m = y1; m < y2; m++)
+                        {
+                            for (int k = x1; k < x2; k++)
+                            {
+                                pixel_position = k * input_data.Stride + m * 4;
+                                for (int channel = 0; channel < 3; channel++)
+                                {
+                                    result[pixel_position + channel] = 255;
+                                }
+                                result[pixel_position + 3] = 255;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        pixel_position = y * input_data.Stride + x * 4;
+                        for (int channel = 0; channel < 3; channel++)
+                        {
+                            result[pixel_position + channel] = buffer[pixel_position + channel];
+                        }
+                        result[pixel_position + 3] = 255;
+                    }
                 }
             }
-            //  return result_image;
 
+            Bitmap result_image = new Bitmap(w, h);
+            BitmapData output_data = result_image.LockBits(new Rectangle(0, 0, w, h), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
+            Marshal.Copy(result, 0, output_data.Scan0, bytes);
+            result_image.UnlockBits(output_data);
 
-            // result = ReadPixels(result_image);
-
-
-            //for (int x = 0; x < w; x++)
-            //{
-            //    for (int y = 0; y < h; y++)
-            //    {
-
-            //    }
-            //}
-
-
-            Bitmap result_image = bm;
-            BitmapData result_data = result_image.LockBits(new Rectangle(0, 0, w, h), ImageLockMode.WriteOnly, PixelFormat.Format24bppRgb);
-
-            Marshal.Copy(result, 0, result_data.Scan0, bytes);
-            result_image.UnlockBits(result_data);
             return result_image;
-
-        }
-
-        public static Rectangle SelectedRect(Point point0, Point point1)
-        {
-            int x = Math.Min(point0.X, point1.X);
-            int y = Math.Min(point0.Y, point1.Y);
-            int width = Math.Abs(point1.X - point0.X);
-            int height = Math.Abs(point1.Y - point0.Y);
-            return new Rectangle(x, y, width, height);
-        }
-
-        private static byte[] ReadPixels(Bitmap img)
-        {
-            int w = img.Width;
-            int h = img.Height;
-
-            BitmapData sd = img.LockBits(new Rectangle(0, 0, w, h),
-                ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-            int bytes = sd.Stride * sd.Height;
-            byte[] buffer = new byte[bytes];
-            Marshal.Copy(sd.Scan0, buffer, 0, bytes);
-            img.UnlockBits(sd);
-            byte[] p = new byte[256];
-            for (int i = 0; i < bytes; i += 4)
-            {
-                p[buffer[i]]++;
-            }
-            return p;
         }
     }
 }

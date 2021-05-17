@@ -3,10 +3,9 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
-
 namespace ImageRecoveryApp
 {
-    public class Fourier : ImageRecoveryImage
+    class FFTMethods : ImageRecoveryImage
     {
         public static Complex[][] ToComplex(Bitmap image)
         {
@@ -40,7 +39,6 @@ namespace ImageRecoveryApp
 
             return result;
         }
-
         public static Complex[] Forward(Complex[] input, bool phaseShift = true)
         {
             var result = new Complex[input.Length];
@@ -133,7 +131,6 @@ namespace ImageRecoveryApp
 
             return transform;
         }
-
         public static Bitmap Inverse(Complex[][] frequencies)
         {
             var p = new Complex[Size][];
