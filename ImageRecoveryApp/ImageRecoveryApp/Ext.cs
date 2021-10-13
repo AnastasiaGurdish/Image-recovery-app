@@ -50,6 +50,19 @@ namespace ImageRecoveryApp
             return result_image;
         }
 
+        public static Bitmap ScaleImage(this Bitmap image, int width, int height)
+        {
+            float xratio = (float)width / image.Width;
+            float yratio = (float)height / image.Height;
+            float ratio = Math.Min(xratio, yratio);
+
+            int w = (int)(image.Width * ratio);
+            int h = (int)(image.Height * ratio);
+
+            Bitmap result = new Bitmap(image, new Size(w, h));
+            return result;
+        }
+
         public static Bitmap Padding(this Bitmap image)
         {
             int w = image.Width;
@@ -133,7 +146,8 @@ namespace ImageRecoveryApp
             }
 
             Bitmap image = new Bitmap(ImageRecoveryImage.Size, ImageRecoveryImage.Size);
-            BitmapData image_data = image.LockBits(new Rectangle(0, 0, ImageRecoveryImage.Size, ImageRecoveryImage.Size),ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
+            BitmapData image_data = image.LockBits(new Rectangle(0, 0, ImageRecoveryImage.Size, ImageRecoveryImage.Size),
+                ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
             int bytes = image_data.Stride * image_data.Height;
             byte[] result = new byte[bytes];
             for (int y = 0; y < ImageRecoveryImage.Size; y++)

@@ -32,7 +32,7 @@ namespace ImageRecoveryApp
             int y1 = 0;
             int y2 = 0;
 
-            if (h > w)
+            if (h >= w)
             {
                 x1 = rndX.Next(0, w);
                 x2 = rndX.Next(x1, w);

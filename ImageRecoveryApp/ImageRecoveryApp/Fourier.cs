@@ -141,10 +141,7 @@ namespace ImageRecoveryApp
             var t = new Complex[Size][];
 
             Bitmap image = new Bitmap(Size, Size);
-            BitmapData image_data = image.LockBits(
-                new Rectangle(0, 0, Size, Size),
-                ImageLockMode.WriteOnly,
-                PixelFormat.Format32bppArgb);
+            BitmapData image_data = image.LockBits(new Rectangle(0, 0, Size, Size), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
             int bytes = image_data.Stride * image_data.Height;
             byte[] result = new byte[bytes];
 

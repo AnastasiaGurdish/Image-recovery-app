@@ -18,3 +18,13 @@ C:\Users\Nana\Downloads\FourierTransformFFT\FourierTransformFFT\obj\Debug\Fourie
 C:\Users\Nana\Downloads\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.csproj.CoreCompileInputs.cache
 C:\Users\Nana\Downloads\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.exe
 C:\Users\Nana\Downloads\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.pdb
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.csprojAssemblyReference.cache
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.FFT.resources
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.Properties.Resources.resources
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.csproj.GenerateResource.cache
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.csproj.CoreCompileInputs.cache
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.exe
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\obj\Debug\FourierTransformFFT.pdb
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\bin\Debug\FourierTransformFFT.exe.config
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\bin\Debug\FourierTransformFFT.exe
+D:\GITHUB\Image-recovery-app\Materiales\FourierTransformFFT\FourierTransformFFT\bin\Debug\FourierTransformFFT.pdb
